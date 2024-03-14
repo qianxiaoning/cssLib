@@ -1,0 +1,26 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$btn-bgColor:blue!default; //定义变量，后面要加分号（可加默认值，使其可修改）
+.index{ //嵌套语法
+    .nav{
+        a{
+            color:#000;
+            &:hover{color:#fff;} //&代表父标签，定义hover时
+        }        
+    }
+    .container{
+        .blueBtn,.redBtn{font-size:16px;} //群组选择器
+    }
+    .footer{
+        background{ //属性嵌套
+            image:url('../..');
+            color:#fff;
+            repeat:no-repeat
+        }
+    }
+}
